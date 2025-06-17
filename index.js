@@ -47,6 +47,11 @@ app.get('/ping',(request,response)=>{
     response.json({message:'PING received'});
 }); //2 Arguments, 1->Route as a string , 2->callback
 
+app.post('/categories/:category/products/:id',(request,response)=>{
+    console.log(request.params);
+    console.log(request.headers);
+    response.json({message:'Ping Received'});
+});
 //1. Using the app object,bind it to a port u want your server to listen for socket connections
 app.listen(PORT,()=>
     {
